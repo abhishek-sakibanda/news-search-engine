@@ -124,7 +124,8 @@ public class WebCrawler {
     }
 
     public static void crawlDefault() {
-        String links = "https://www.cbc.ca/" + "\n" + "https://www.bbc.com/news/world/us_and_canada" + "\n" + "https://www.ctvnews.ca/" + "\n" + "https://www.cicnews.com/";
+        String links = "https://www.cbc.ca/" + "\n" + "https://www.bbc.com/news/world/us_and_canada" + "\n"
+                + "https://www.ctvnews.ca/" + "\n" + "https://www.cicnews.com/";
         crawlPages(links);
     }
 
@@ -143,9 +144,10 @@ public class WebCrawler {
         assert files != null;
 
         for (File f : files) {
-            f.delete();
+            if (!f.delete()) {
+                System.out.println("Unable to delete file: " + f.getName());
+            }
         }
-
         System.out.println("WebPages wiped!");
     }
 

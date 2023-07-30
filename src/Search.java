@@ -34,4 +34,8 @@ public class Search {
             System.out.println(url);
         }
     }
+
+    public static void main(String[] args) {
+        Search.searchPhrase("voice", 5);
+    }
 }

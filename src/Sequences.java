@@ -40,4 +40,13 @@ public class Sequences {
 
         return dp[len1][len2];
     }
+
+    public static void main(String[] args) {
+        String word1 = "Grate";
+        String word2 = "Great";
+        int updates = Sequences.editDistance(word1, word2);
+
+        System.out.println("\nThe word \"" + word1 + "\" takes " + updates
+                + " update(s) to convert to \"" + word2 + "\"");
+    }
 }
