@@ -1,5 +1,10 @@
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Objects;
+
 
 // This class uses InvertedIndex functionality and uses HashMap to store the occurrences of words in the files.
 public class PreSearch {

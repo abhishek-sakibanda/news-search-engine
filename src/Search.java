@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+
 public class Search {
     // Searches for a phrase in the files using InvertedIndex created by PreSearch.java.
     public static void searchPhrase(String keyword, int numberOfResults) {

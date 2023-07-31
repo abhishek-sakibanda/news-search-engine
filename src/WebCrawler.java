@@ -7,9 +7,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;
+
 
 //Uses Jsoup to crawl through web and creates text files with parsed information.
 public class WebCrawler {
@@ -57,7 +60,7 @@ public class WebCrawler {
 
     public static String urlToHTML(String link) {
         try {
-            URL url = new URL(link);
+            URL url = new URI(link).toURL();
             URLConnection conn = url.openConnection();
             conn.setConnectTimeout(5000);
             conn.setReadTimeout(5000);
@@ -72,6 +75,8 @@ public class WebCrawler {
             return result;
         } catch (IOException e) {
             System.out.println(e);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
         }
         return link;
     }

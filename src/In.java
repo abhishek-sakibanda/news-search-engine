@@ -18,6 +18,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+
 /**
  * <i>Input</i>. This class provides methods for reading strings
  * and numbers from standard input, file input, URLs, and sockets.

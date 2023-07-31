@@ -1,10 +1,17 @@
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 
 public class SortResultsByRank {
     // Sorts values of given HashMap in descending order
-    private static HashMap<String, Integer> sortByValue(HashMap<String, Integer> map, Comparator<Map.Entry<String, Integer>> comparator) {
+    private static HashMap<String, Integer> sortByValue(HashMap<String, Integer> map,
+                                                        Comparator<Map.Entry<String, Integer>> comparator) {
         List<Map.Entry<String, Integer>> list = new LinkedList<>(map.entrySet());
         list.sort(comparator);
 
@@ -22,7 +29,8 @@ public class SortResultsByRank {
     }
 
     public static HashMap<String, Integer> sortValuesInverse(HashMap<String, Integer> map) {
-        Comparator<Map.Entry<String, Integer>> descendingComparator = (o1, o2) -> o2.getValue().compareTo(o1.getValue());
+        Comparator<Map.Entry<String, Integer>> descendingComparator = (o1, o2) ->
+                o2.getValue().compareTo(o1.getValue());
         return sortByValue(map, descendingComparator);
     }
 
