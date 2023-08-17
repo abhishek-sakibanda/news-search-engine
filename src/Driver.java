@@ -8,7 +8,9 @@ public class Driver {
         Scanner sc2 = new Scanner(System.in);
         boolean menu = true;
         while (menu) {
-            System.out.println("\n\n-----------------------------------------\nNews Search Engine\n-----------------------------------------");
+            System.out.println("\n\n-----------------------------------------" +
+                    "\nNews Search Engine" +
+                    "\n-----------------------------------------");
             System.out.println("Press 1 to search for a keyword");
             System.out.println("Press 2 to crawl pages (approx. time: 15-30 minutes)");
             System.out.println("Press 0 to exit");
@@ -43,7 +45,9 @@ public class Driver {
         Scanner sc2 = new Scanner(System.in);
         boolean menu = true;
         while (menu) {
-            System.out.println("\n\n-----------------------------------------\nWeb Crawling\n-----------------------------------------");
+            System.out.println("\n\n-----------------------------------------" +
+                    "\nWeb Crawling" +
+                    "\n-----------------------------------------");
             System.out.println("Press 1 to enter websites to crawl");
             System.out.println("Press 2 to crawl the default web pages");
             System.out.println("Press 3 to erase the webpages crawled");

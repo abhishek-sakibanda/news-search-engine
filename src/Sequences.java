@@ -22,9 +22,9 @@ public class Sequences {
             for (int j = 0; j < len2; j++) {
                 char c2 = word2.charAt(j);
 
-                //if last two chars equal
+                // if last two chars equal
                 if (c1 == c2) {
-                    //update dp value for +1 length
+                    // update dp value for +1 length
                     dp[i + 1][j + 1] = dp[i][j];
                 } else {
                     int replace = dp[i][j] + 1;
@@ -37,7 +37,6 @@ public class Sequences {
                 }
             }
         }
-
         return dp[len1][len2];
     }
 

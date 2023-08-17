@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Writer;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -154,6 +155,16 @@ public class WebCrawler {
             }
         }
         System.out.println("WebPages wiped!");
+        createPlaceholderFile();
+    }
+
+    private static void createPlaceholderFile() {
+        File file = new File("Webpages/WHY IS THIS FILE EMPTY");
+        try (Writer writer = new FileWriter(file)) {
+            writer.write("Scraped webpages appear in this folder as text files");
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
     }
 
     public static void main(String[] args) {
